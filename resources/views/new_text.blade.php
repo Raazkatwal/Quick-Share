@@ -1,9 +1,10 @@
-<!-- @extends('layout')
-@push('content') -->
+@extends('layout')
+@push('content')
 <main
     class="bg-custombg font-play grid h-screen place-items-center p-5 text-white"
 >
-    <form action="" class="h-full w-full rounded-xl bg-[#22283C] p-5">
+    <form action="{{ route('share') }}" class="h-full w-full rounded-xl bg-[#22283C] p-5" method="POST">
+        @csrf
         <div class="flex justify-between">
             <input
                 type="text"
@@ -36,4 +37,4 @@
         </button>
     </form>
 </main>
-<!-- @endpush -->
+@endpush
