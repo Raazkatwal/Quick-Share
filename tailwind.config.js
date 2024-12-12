@@ -13,6 +13,10 @@ export default {
         extend: {
             fontFamily: {
                 sans: ['Figtree', ...defaultTheme.fontFamily.sans],
+                play: ['Play', 'sans-serif'],
+            },
+            colors: {
+                custombg: '#3C486B',
             },
         },
     },
