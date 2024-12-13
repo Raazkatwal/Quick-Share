@@ -1,5 +1,5 @@
 @extends('layout')
-@push('content')
+@section('content')
 <main class="bg-custombg font-play h-screen pt-4 text-white">
     <nav class="flex w-screen items-center justify-center">
         <a href="" class="text-2xl font-semibold">QuickShare</a>
@@ -21,4 +21,4 @@
         </a>
     </div>
 </main>
-@endpush
+@endsection

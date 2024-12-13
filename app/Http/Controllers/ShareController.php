@@ -19,6 +19,7 @@ class ShareController extends Controller
             'text' => $r->text,
             'code' => $rand,
         ]);
-        return redirect()->route('copy_link', ['id'=>$rand]);
+        session(['code_creator' => true]);
+        return redirect()->route('user.check', ['id'=>$rand]);
     }
 }
