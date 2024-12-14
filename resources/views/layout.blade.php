@@ -15,7 +15,23 @@
 <body class="overflow-hidden">
     @yield('content')
 </body>
+<script>
+    function copyToClipboard() {
+        var copyText = document.getElementById("myInput");
+        var copyButton = document.getElementById("copyButton");
+        var copyIcon = document.getElementById("copyIcon");
 
+        navigator.clipboard.writeText(copyText.value);
+
+        copyButton.disabled = true;
+        copyButton.innerHTML = 'Copied <i class="fa-solid fa-check"></i>';
+
+        setTimeout(function() {
+            copyButton.innerHTML = 'Copy <i id="copyIcon" class="fa-solid fa-copy"></i>';
+            copyButton.disabled = false;
+        }, 2000);
+    }
+</script>
 @stack('scripts')
 
 </html>

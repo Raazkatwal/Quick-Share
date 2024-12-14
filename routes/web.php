@@ -9,7 +9,8 @@ Route::get('/', function () {
 });
 
 Route::view('/code', 'new_text');
-// Route::view('/code/{id}', 'share_link')->name('copy_link');
 
 Route::post('/share', [ShareController::class, 'share'])->name('share');
-Route::get('/{id}', [PageController::class, 'check'])->name('user.check');
+Route::post('/search', [ShareController::class, 'search'])->name('search');
+Route::get('/code/{id}', [ShareController::class, 'fetch_code'])->name('copy_text');
+Route::get('/{id}', [ShareController::class, 'check'])->name('share_link');
